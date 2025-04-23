@@ -1,12 +1,6 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
-  output = "../prisma/generated/client"
+  output   = "../prisma/generated/client"
 }
 
 datasource db {
@@ -15,13 +9,102 @@ datasource db {
 }
 
 model User {
-  username  String    @id @unique
+  id        String    @id @unique
+  email     String    @unique
   password  String
   role      USER_ROLE
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
 
   @@map("users")
+  Profile Profile[]
+}
+
+model Profile {
+  id String @id @unique
+  firstName String
+  lastName String
+  phone String
+  address String
+  userId String @unique
+  User User @relation(fields: [userId], references: [id])
+
+  @@map("profiles")
+  @@index([userId])
+}
+
+model Restaurant {
+  id String @id @unique
+  name String
+  address String
+  phone String
+  ownerId String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("restaurants")
+  @@index([ownerId])
+}
+
+model RestaurantAdmin {
+  id String @id @unique
+  restaurantId String
+  userId String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("restaurant_admins")
+  @@index([restaurantId])
+  @@index([userId])
+}
+
+model Rider {
+  id String @id @unique
+  userId String
+  restaurantId String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("riders")
+  @@index([userId])
+  @@index([restaurantId])
+}
+
+model MenuItem {
+  id String @id @unique
+  name String
+  description String
+  price Float
+  restaurantId String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("menu_items")
+  @@index([restaurantId])
+}
+
+model Variation {
+  id String @id @unique
+  name String
+  menuItemId String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("variations")
+  @@index([menuItemId])
+}
+
+model Order {
+  id String @id @unique
+  userId String
+  restaurantId String
+  status Status
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("orders")
+  @@index([userId])
+  @@index([restaurantId])
 }
 
 enum USER_ROLE {
