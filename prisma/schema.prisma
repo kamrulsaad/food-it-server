@@ -6,6 +6,7 @@
 
 generator client {
   provider = "prisma-client-js"
+  output = "../prisma/generated/client"
 }
 
 datasource db {
@@ -14,10 +15,36 @@ datasource db {
 }
 
 model User {
-  username  String   @id @unique
+  username  String    @id @unique
   password  String
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  role      USER_ROLE
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
 
   @@map("users")
+}
+
+enum USER_ROLE {
+  super_admin
+  restaurent_owner
+  restaurent_admin
+  rider
+  customer
+}
+
+enum Status {
+  pending
+  completed
+  cancelled
+}
+
+enum TicketStatus {
+  pending
+  resolved
+  closed
+}
+
+enum ServiceStatus {
+  active
+  upcoming
 }

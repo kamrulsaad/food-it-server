@@ -1,0 +1,48 @@
+Wed Apr 23 2025 18:14:54 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "password"
+    ],
+    "message": "Password is required"
+  }
+]
+Wed Apr 23 2025 18:15:2 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+[31mInvalid [1m`prisma.user.findUnique()`[22m invocation in[39m
+[4mD:\Web Development\Level 2\Projects\food-it-server\src\app\modules\auth\auth.utils.ts:14:21[24m
+
+  [2m[90m11[39m [34m)[39m[34m:[39m Promise<boolean> => [36mawait[39m bcrypt[34m.[39m[36mcompare[39m[34m([39mpassword[34m,[39m hashedPassword[34m)[39m[34m;[39m[22m
+  [2m[90m12[39m [22m
+  [2m[90m13[39m [36mconst[39m isUserExist = [36masync[39m [34m([39musername[34m:[39m string[34m)[39m[34m:[39m Promise<User | [36mnull[39m> =>[22m
+[1m[31m→[39m[22m [2m[90m14[39m   [36mawait[39m prisma[34m.[39muser[34m.[39m[36mfindUnique[39m[34m([39m[22m
+Database `food-it` does not exist on the database server at `localhost:3306`.
+Wed Apr 23 2025 18:18:18 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+[31mInvalid [1m`prisma.user.findUnique()`[22m invocation in[39m
+[4mD:\Web Development\Level 2\Projects\food-it-server\src\app\modules\auth\auth.utils.ts:14:21[24m
+
+  [2m[90m11[39m [34m)[39m[34m:[39m Promise<boolean> => [36mawait[39m bcrypt[34m.[39m[36mcompare[39m[34m([39mpassword[34m,[39m hashedPassword[34m)[39m[34m;[39m[22m
+  [2m[90m12[39m [22m
+  [2m[90m13[39m [36mconst[39m isUserExist = [36masync[39m [34m([39musername[34m:[39m string[34m)[39m[34m:[39m Promise<User | [36mnull[39m> =>[22m
+[1m[31m→[39m[22m [2m[90m14[39m   [36mawait[39m prisma[34m.[39muser[34m.[39m[36mfindUnique[39m[34m([39m[22m
+Database `food-it` does not exist on the database server at `localhost:3306`.
+Wed Apr 23 2025 18:20:20 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+[31mInvalid [1m`prisma.user.findUnique()`[22m invocation in[39m
+[4mD:\Web Development\Level 2\Projects\food-it-server\src\app\modules\auth\auth.utils.ts:14:21[24m
+
+  [2m[90m11[39m [34m)[39m[34m:[39m Promise<boolean> => [36mawait[39m bcrypt[34m.[39m[36mcompare[39m[34m([39mpassword[34m,[39m hashedPassword[34m)[39m[34m;[39m[22m
+  [2m[90m12[39m [22m
+  [2m[90m13[39m [36mconst[39m isUserExist = [36masync[39m [34m([39musername[34m:[39m string[34m)[39m[34m:[39m Promise<User | [36mnull[39m> =>[22m
+[1m[31m→[39m[22m [2m[90m14[39m   [36mawait[39m prisma[34m.[39muser[34m.[39m[36mfindUnique[39m[34m([39m[22m
+The table `users` does not exist in the current database.
+Wed Apr 23 2025 18:22:39 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+[31mInvalid [1m`prisma.user.findUnique()`[22m invocation in[39m
+[4mD:\Web Development\Level 2\Projects\food-it-server\src\app\modules\auth\auth.utils.ts:14:21[24m
+
+  [2m[90m11[39m [34m)[39m[34m:[39m Promise<boolean> => [36mawait[39m bcrypt[34m.[39m[36mcompare[39m[34m([39mpassword[34m,[39m hashedPassword[34m)[39m[34m;[39m[22m
+  [2m[90m12[39m [22m
+  [2m[90m13[39m [36mconst[39m isUserExist = [36masync[39m [34m([39musername[34m:[39m string[34m)[39m[34m:[39m Promise<User | [36mnull[39m> =>[22m
+[1m[31m→[39m[22m [2m[90m14[39m   [36mawait[39m prisma[34m.[39muser[34m.[39m[36mfindUnique[39m[34m([39m[22m
+The table `users` does not exist in the current database.

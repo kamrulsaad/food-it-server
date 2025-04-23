@@ -1,0 +1,20 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "D:\\Web Development\\Level 2\\Projects\\food-it-server\\logs\\winston\\successes\\.78b3f1babc772d3f32656b6a745c1d3492c2e72f-audit.json",
+    "files": [
+        {
+            "date": 1745408786482,
+            "name": "D:\\Web Development\\Level 2\\Projects\\food-it-server\\logs\\winston\\successes\\phu-2025-23-04-17-success.log",
+            "hash": "37f971999d403776c1f7cf54b8c49a49a8483eecacb9f2b3561d143fca558866"
+        },
+        {
+            "date": 1745410359451,
+            "name": "D:\\Web Development\\Level 2\\Projects\\food-it-server\\logs\\winston\\successes\\phu-2025-23-04-18-success.log",
+            "hash": "8c4bb4f221ef0bac2a2a277152911b4c69fea9d9c4db3196d70c1fc4a8336c33"
+        }
+    ],
+    "hashType": "sha256"
+}
